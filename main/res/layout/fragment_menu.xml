@@ -84,5 +84,6 @@
         android:textColor="#D1E0D7"
         android:textSize="38sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo">boton_donar</androidx.appcompat.widget.AppCompatButton>
+        app:layout_constraintTop_toBottomOf="@+id/titulo"/>
+  
 </androidx.constraintlayout.widget.ConstraintLayout>

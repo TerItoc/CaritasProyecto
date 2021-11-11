@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1E0D7"
+    tools:context=".Login">
+
+
+    <ImageView
+        android:id="@+id/login_to_menu"
+        android:layout_width="72dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/flecha_return_home"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_login"
+        android:layout_width="500dp"
+        android:layout_height="350dp"
+        android:contentDescription="@string/logo_caritas"
+        android:src="@drawable/logo_sin_fondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="222dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/usuario"
+        android:textColor="#003B5C"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_login" />
+
+    <TextView
+        android:id="@+id/textView_contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/contrase_a"
+        android:textColor="#003B5C"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_text_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="282dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="900dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="222dp"
+            android:layout_marginTop="24dp"
+            android:background="#D1E0D7"
+            android:ems="10"
+            android:hint="@string/escribe_tu_email_aqu"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="#003B5C"
+            android:textSize="18sp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="155dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#003B5C">
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="900dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="222dp"
+            android:layout_marginTop="24dp"
+            android:background="#D1E0D7"
+            android:ems="10"
+            android:hint="@string/escribe_tu_contrase_a_aqu"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="#003B5C"
+            android:textSize="18sp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView_olvidar_contra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/has_olvidado_tu_contrase_a"
+        android:textColor="#003B5C"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_login"
+        android:layout_width="160dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_button_login"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

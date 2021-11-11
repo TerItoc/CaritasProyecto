@@ -54,7 +54,7 @@
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></androidx.appcompat.widget.AppCompatButton>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/boton_ayuda"
@@ -69,7 +69,7 @@
         android:textColor="#D1E0D7"
         android:textSize="38sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo"></androidx.appcompat.widget.AppCompatButton>
+        app:layout_constraintTop_toBottomOf="@+id/titulo"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/boton_donar"
@@ -84,5 +84,6 @@
         android:textColor="#D1E0D7"
         android:textSize="38sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo"></androidx.appcompat.widget.AppCompatButton>
+        app:layout_constraintTop_toBottomOf="@+id/titulo"/>
+  
 </androidx.constraintlayout.widget.ConstraintLayout>

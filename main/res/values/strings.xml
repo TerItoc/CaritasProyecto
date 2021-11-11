@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">caritas_login_inicio</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="has_olvidado_tu_contrase_a">¿Has olvidado tu contraseña?</string>
+    <string name="login">Login</string>
+    <string name="escribe_tu_email_aqu">Escribe tu email aquí</string>
+    <string name="escribe_tu_contrase_a_aqu">Escribe tu contraseña aquí</string>
+    <string name="flecha_return_home">flecha_return_home</string>
+    <string name="logo_caritas">logo_caritas</string>
+    <string name="bienvenido_a_c_ritas_de_monterrey">Bienvenido a Cáritas de Monterrey</string>
+    <string name="configuraci_n">Configuración</string>
+    <string name="solicitar_ayuda">Solicitar Ayuda</string>
+    <string name="donaci_n">Donación</string>
+    <string name="logo_caritas_izq">logo_caritas_izq</string>
+    <string name="logo_caritas_der">logo_caritas_der</string>
+</resources>

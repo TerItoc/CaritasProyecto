@@ -2,4 +2,6 @@
 <font-family xmlns:app="http://schemas.android.com/apk/res-auto">
     <font app:fontStyle="normal" app:fontWeight="400" app:font="@font/gotham_medium"/>
     <font app:fontStyle="italic" app:fontWeight="400" app:font="@font/gotham_medium_italic"/>
+    <font app:fontStyle="normal" app:fontWeight="400" app:font="@font/gotham_light"/>
+    <font app:fontStyle="italic" app:fontWeight="400" app:font="@font/gotham_light_italic"/>
 </font-family>

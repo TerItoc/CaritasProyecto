@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1E0D7"
+    tools:context=".UserOptions">
+
+    <TextView
+        android:id="@+id/titulo_user_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/opciones_de_usuario"
+        android:textAllCaps="true"
+        android:textColor="#003B5C"
+        android:textSize="44sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_izq"
+        android:layout_width="250dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/logo_caritas_izq"
+        android:src="@drawable/logo_sin_fondo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_der"
+        android:layout_width="250dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/logo_caritas_der"
+        android:src="@drawable/logo_sin_fondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="559dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_user_options" />
+
+    <TextView
+        android:id="@+id/text_dashboard_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="400dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/nombre_de_usuario"
+        android:textAllCaps="false"
+        android:fontFamily="@font/gotham_medium"
+        android:textSize="24sp"
+        android:textColor="#003B5C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/user_to_dashboard"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/custom_button_login"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/dashboard_user"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFA"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/user_to_login"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/custom_button_login"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/log_out_user"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFA"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_user_options_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/correo_electr_nico"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textColor="#003B5C"
+        app:layout_constraintStart_toStartOf="@+id/text_dashboard_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/text_dashboard_titulo" />
+
+    <TextView
+        android:id="@+id/text_user_options_contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/contrase_a_user_options"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textColor="#003B5C"
+        app:layout_constraintStart_toStartOf="@+id/text_user_options_email"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_options_email" />
+
+    <TextView
+        android:id="@+id/text_user_options_notificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/notificaciones"
+        android:textAllCaps="false"
+        android:textColor="#003B5C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/imagen_grafica1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_options_contraseña" />
+
+    <EditText
+        android:id="@+id/editTextPassword_Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/gotham_medium"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail_Usuario"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail_Usuario"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextEmail_Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/gotham_medium"
+        android:inputType="textEmailAddress"
+        android:lines="1"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNombre_Usuario"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombre_Usuario"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextNombre_Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="400dp"
+        android:ems="10"
+        android:fontFamily="@font/gotham_medium"
+        android:inputType="textPersonName"
+        android:lines="1"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <ImageView
+        android:id="@+id/imagen_grafica1"
+        android:layout_width="550dp"
+        android:layout_height="248dp"
+        android:contentDescription="@string/norificaciones_prueba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_user_options_notificaciones"
+        app:srcCompat="@drawable/captura"
+        tools:ignore="ImageContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

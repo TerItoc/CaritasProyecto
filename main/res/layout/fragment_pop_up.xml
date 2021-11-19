@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="450dp"
+    android:layout_height="450dp"
+    android:layout_gravity="center"
+    android:background="#D1E0D7"
+    tools:context=".PopUp">
+
+    <ImageView
+        android:id="@+id/logo_pop_up"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/logo_sin_fondo"/>
+
+    <TextView
+        android:id="@+id/turno_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tu turno será procesado"
+        android:textSize="28sp"
+        android:fontFamily="@font/gotham_medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/logo_pop_up"/>
+
+    <TextView
+        android:id="@+id/turno_desc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Presione el botón para terminar tu solicitud"
+        android:textSize="24sp"
+        android:fontFamily="@font/gotham_light"
+        android:layout_below="@id/turno_desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pop_up_to_menu"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/turno_desc2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/custom_button_login"
+        android:text="Listo"
+        android:textSize="20sp"
+        android:fontFamily="@font/gotham_medium"
+        android:textColor="#FFFFFA" />
+
+</RelativeLayout>

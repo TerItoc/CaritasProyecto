@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1E0D7">
+
+    <TextView
+        android:id="@+id/text_solicitante_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/solicitante_titulo"
+        android:textAllCaps="true"
+        android:textColor="#003B5C"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/solicitante_to_menu"
+        android:layout_width="72dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/flecha_return_home"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/ACTextView_Departamento"
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/custom_button_login"
+        android:ems="10"
+        android:fontFamily="@font/gotham_medium"
+        android:hint="@string/a_qu_departamento_se_dirige"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFA"
+        android:textColorHint="#FFFFFA"
+        android:textSize="42sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_solicitante_titulo" />
+
+    <EditText
+        android:id="@+id/editText_Necesidad"
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="128dp"
+        android:background="@drawable/custom_button_login"
+        android:ems="10"
+        android:fontFamily="@font/gotham_medium"
+        android:hint="@string/qu_es_lo_que_necesita"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:maxLines="1"
+        android:lines="1"
+        android:paddingEnd="12dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFA"
+        android:textColorHint="#FFFFFA"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_solicitante_titulo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_enviar"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/custom_button_enviar"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/enviar_solicitante"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFA"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Necesidad" />
+
+    <ImageView
+        android:id="@+id/logo_izq"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/logo_caritas_izq"
+        android:src="@drawable/logo_sin_fondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_der"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/logo_caritas_der"
+        android:src="@drawable/logo_sin_fondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

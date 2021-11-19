@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_menu_to_login"
             app:destination="@id/login" />
+        <action
+            android:id="@+id/action_menu_to_solicitante"
+            app:destination="@id/solicitante" />
     </fragment>
     <fragment
         android:id="@+id/login"
@@ -20,6 +23,53 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu" />
+        <action
+            android:id="@+id/action_login_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.mefalvarez.caritas_login_inicio.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_userOptions"
+            app:destination="@id/userOptions" />
+        <action
+            android:id="@+id/action_dashboard_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/userOptions"
+        android:name="com.mefalvarez.caritas_login_inicio.UserOptions"
+        android:label="fragment_user_options"
+        tools:layout="@layout/fragment_user_options" >
+        <action
+            android:id="@+id/action_userOptions_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_userOptions_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/solicitante"
+        android:name="com.mefalvarez.caritas_login_inicio.Solicitante"
+        android:label="Solicitante" >
+        <action
+            android:id="@+id/action_solicitante_to_menu"
+            app:destination="@id/menu" />
+        <action
+            android:id="@+id/action_solicitante_to_popUp"
+            app:destination="@id/popUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/popUp"
+        android:name="com.mefalvarez.caritas_login_inicio.PopUp"
+        android:label="fragment_pop_up"
+        tools:layout="@layout/fragment_pop_up" >
+        <action
+            android:id="@+id/action_popUp_to_menu"
             app:destination="@id/menu" />
     </fragment>
 </navigation>

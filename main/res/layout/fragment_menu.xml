@@ -13,20 +13,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="293dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="292dp"
         android:fontFamily="@font/gotham_medium"
         android:text="@string/bienvenido_a_c_ritas_de_monterrey"
         android:textColor="#FFFFFA"
-        android:textSize="42sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <TextView
+        android:id="@+id/subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="293dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="292dp"
+        android:fontFamily="@font/gotham_light"
+        android:text="@string/inicia_tu_turno_aqu"
+        android:textColor="#FFFFFA"
+        android:textSize="44sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <!--<ImageView
         android:id="@+id/logo_izq"
-        android:layout_width="261dp"
-        android:layout_height="151dp"
+        android:layout_width="260dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:contentDescription="@string/logo_caritas_izq"
         android:src="@drawable/logo_blanco"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,56 +51,78 @@
 
     <ImageView
         android:id="@+id/logo_der"
-        android:layout_width="261dp"
-        android:layout_height="151dp"
+        android:layout_width="260dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="@string/logo_caritas_der"
+        android:src="@drawable/logo_blanco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ImageView
+        android:id="@+id/logo_izq"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="260dp"
+        android:contentDescription="@string/logo_caritas_izq"
+        android:src="@drawable/logo_blanco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_der"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/logo_caritas_der"
         android:src="@drawable/logo_blanco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <!--<androidx.appcompat.widget.AppCompatButton
         android:id="@+id/boton_config"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="48dp"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/gotham_medium"
         android:text="@string/configuraci_n"
         android:textAllCaps="false"
         android:textColor="#D1E0D7"
-        android:textSize="38sp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/boton_empezar"
+        android:layout_width="450dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/empezar"
+        android:textAllCaps="true"
+        android:textColor="#D1E0D7"
+        android:textSize="52sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo" />
+
+    <ImageButton
+        android:id="@+id/boton_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="#009CA6"
+        android:src="@drawable/ic_baseline_person_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/boton_menu_login" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/boton_ayuda"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/custom_button"
-        android:fontFamily="@font/gotham_medium"
-        android:text="@string/solicitar_ayuda"
-        android:textAllCaps="false"
-        android:textColor="#D1E0D7"
-        android:textSize="38sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/boton_donar"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="256dp"
-        android:background="@drawable/custom_button"
-        android:fontFamily="@font/gotham_medium"
-        android:text="@string/donaci_n"
-        android:textAllCaps="false"
-        android:textColor="#D1E0D7"
-        android:textSize="38sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo"/>
-  
 </androidx.constraintlayout.widget.ConstraintLayout>

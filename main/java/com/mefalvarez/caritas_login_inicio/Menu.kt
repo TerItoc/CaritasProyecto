@@ -38,11 +38,13 @@ class Menu : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         
         binding.botonConfig.setOnClickListener {
             findNavController().navigate(R.id.action_menu_to_login)
+        }
+
+        binding.botonEmpezar.setOnClickListener {
+            findNavController().navigate(R.id.action_menu_to_solicitante)
         }
     }
 }

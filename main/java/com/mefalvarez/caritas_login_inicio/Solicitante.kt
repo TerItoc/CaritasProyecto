@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -13,11 +14,9 @@ import com.mefalvarez.caritas_login_inicio.databinding.FragmentSolicitanteBindin
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import javax.mail.Session
-import javax.mail.Transport
+import javax.mail.*
 import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage
-
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,6 +28,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [Solicitante.newInstance] factory method to
  * create an instance of this fragment.
  */
+//En este fragment es donde se desarrolla el envio de los correos
 class Solicitante : Fragment() {
     private var _binding: FragmentSolicitanteBinding? = null
     private val binding get() = _binding!!
@@ -46,9 +46,11 @@ class Solicitante : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Se muestran algunos de los departamentos que salen en el los editText
         val Departamentos = arrayOf(
             Departamento("Departamento 1", "departamento1@email.com"),
             Departamento("Solicitudes", "departamento2@email.com"),
@@ -66,10 +68,12 @@ class Solicitante : Fragment() {
         binding.ACTextViewDepartamento?.setAdapter(adapter)
         binding.ACTextViewDepartamento?.threshold = 1 // Esto es para definir cuantas letras se deben de escribir antes de comenzar la búsqueda
 
+        //La navegacion para ir al pop up que regresa al menu
         binding.solicitanteToMenu.setOnClickListener {
             findNavController().navigate(R.id.action_solicitante_to_menu)
         }
 
+        //En este boton se ejecuta la funcion que envia los correos
         binding.buttonEnviar.setOnClickListener {
             lifecycleScope.launch {
                 withContext(Dispatchers.IO) {
@@ -80,10 +84,11 @@ class Solicitante : Fragment() {
         }
     }
 
+    //Funcion que envia los correos
     private fun sendEmail() {
         try {
-
             val props = System.getProperties()
+            val necesidad = view?.findViewById<EditText>(R.id.editText_Necesidad)
 
             props["mail.smtp.host"] = "smtp.gmail.com"
             props["mail.smtp.socketFactory.port"] = "465"
@@ -92,10 +97,10 @@ class Solicitante : Fragment() {
             props["mail.smtp.port"] = "465"
 
             val session = Session.getInstance(props,
-                object : javax.mail.Authenticator() {
+                object : Authenticator() {
                     //Authenticating the password
-                    override fun getPasswordAuthentication(): javax.mail.PasswordAuthentication {
-                        return javax.mail.PasswordAuthentication(
+                    override fun getPasswordAuthentication(): PasswordAuthentication {
+                        return PasswordAuthentication(
                             Credentials1.EMAIL,
                             Credentials1.PASSWORD
                         )
@@ -109,13 +114,15 @@ class Solicitante : Fragment() {
 
             //Adding receiver
             mm.addRecipient(
-                javax.mail.Message.RecipientType.TO,
+                Message.RecipientType.TO,
                 InternetAddress(emailTo)
             )
             //Adding subject
-            mm.subject = "Prueba de envio de correo"
-            //Adding message
-            mm.setText("Esto es una prueba.")
+            mm.subject = "Notificacion del solicitante"
+            //Aqui se toma el texto del motivo para ser añadido como el texto del correo
+            if (necesidad != null) {
+                mm.setText(necesidad.getText().toString())
+            }
 
             //Sending email
 

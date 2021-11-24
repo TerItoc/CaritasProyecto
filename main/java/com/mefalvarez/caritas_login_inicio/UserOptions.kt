@@ -1,12 +1,11 @@
 package com.mefalvarez.caritas_login_inicio
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.mefalvarez.caritas_login_inicio.databinding.FragmentLoginBinding
 import com.mefalvarez.caritas_login_inicio.databinding.FragmentUserOptionsBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,6 +18,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [UserOptions.newInstance] factory method to
  * create an instance of this fragment.
  */
+//En esta pantalla es en donde se pueden modificar algunos de los parametros del usuario
 class UserOptions : Fragment() {
     private var _binding: FragmentUserOptionsBinding? = null
     private val binding get() = _binding!!
@@ -37,6 +37,7 @@ class UserOptions : Fragment() {
         return binding.root
     }
 
+    //Botones para moverse entre volver al Login y moverse al dashboard
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

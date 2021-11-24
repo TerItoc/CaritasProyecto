@@ -1,13 +1,12 @@
 package com.mefalvarez.caritas_login_inicio
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.mefalvarez.caritas_login_inicio.databinding.FragmentDashboardBinding
-import com.mefalvarez.caritas_login_inicio.databinding.FragmentLoginBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,6 +18,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [Dashboard.newInstance] factory method to
  * create an instance of this fragment.
  */
+//El fragment del dashboard donde se muestran graficas de las visitas
 class Dashboard : Fragment() {
     private var _binding: FragmentDashboardBinding? = null
     private val binding get() = _binding!!
@@ -37,6 +37,7 @@ class Dashboard : Fragment() {
         return binding.root
     }
 
+    //Botones en los que se ejecuta la navegacion con las pantallas que estan con el dashboard
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

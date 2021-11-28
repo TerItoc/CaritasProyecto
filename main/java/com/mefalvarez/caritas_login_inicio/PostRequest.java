@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +17,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,8 +29,8 @@ public class PostRequest extends AppCompatActivity {
     // button, textview and progressbar.
     private EditText nameEdt, jobEdt;
     private Button postDataBtn;
-    private TextView responseTV;
-    private ProgressBar loadingPB;
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+    LocalDateTime now = LocalDateTime.now();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class PostRequest extends AppCompatActivity {
         // initializing our views
         nameEdt = findViewById(R.id.ACTextView_Departamento);
         jobEdt = findViewById(R.id.editText_Necesidad);
+        postDataBtn = findViewById(R.id.button_enviar);
 
         // adding on click listener to our button.
         postDataBtn.setOnClickListener(new View.OnClickListener() {
@@ -50,15 +52,14 @@ public class PostRequest extends AppCompatActivity {
                     return;
                 }
                 // calling a method to post the data and passing our name and job.
-                postDataUsingVolley(nameEdt.getText().toString(), jobEdt.getText().toString());
+                postDataUsingVolley(nameEdt.getText().toString(), jobEdt.getText().toString(), dtf.format(now));
             }
         });
     }
 
-    private void postDataUsingVolley(String name, String job) {
+    private void postDataUsingVolley(String name, String job, String date) {
         // url to post our data
-        String url = "http://localhost:8000/employee/";
-        loadingPB.setVisibility(View.VISIBLE);
+        String url = "http://localhost:8000/visit/";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(PostRequest.this);
@@ -72,7 +73,6 @@ public class PostRequest extends AppCompatActivity {
                 // inside on response method we are
                 // hiding our progress bar
                 // and setting data to edit text as empty
-                loadingPB.setVisibility(View.GONE);
                 nameEdt.setText("");
                 jobEdt.setText("");
 
@@ -87,9 +87,8 @@ public class PostRequest extends AppCompatActivity {
                     // extract from our json object.
                     String name = respObj.getString("departamento");
                     String job = respObj.getString("motivo");
+                    String date = respObj.getString("yyyy/MM/dd HH:mm:ss");
 
-                    // on below line we are setting this string s to our text view.
-                    responseTV.setText("Name : " + name + "\n" + "Job : " + job);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -111,6 +110,7 @@ public class PostRequest extends AppCompatActivity {
                 // and value pair to our parameters.
                 params.put("name", name);
                 params.put("job", job);
+                params.put("date", date);
 
                 // at last we are
                 // returning our params.

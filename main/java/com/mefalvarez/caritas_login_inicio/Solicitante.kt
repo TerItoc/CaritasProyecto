@@ -78,7 +78,6 @@ class Solicitante : Fragment() {
             lifecycleScope.launch {
                 withContext(Dispatchers.IO) {
                     sendEmail()
-                    PostRequest()
                 }
             }
             findNavController().navigate(R.id.action_solicitante_to_popUp)

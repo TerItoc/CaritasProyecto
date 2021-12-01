@@ -10,10 +10,16 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.android.volley.Request
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
 import com.mefalvarez.caritas_login_inicio.databinding.FragmentSolicitanteBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONObject
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.mail.*
 import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage
@@ -75,14 +81,44 @@ class Solicitante : Fragment() {
 
         //En este boton se ejecuta la funcion que envia los correos
         binding.buttonEnviar.setOnClickListener {
+            val departamento = binding.ACTextViewDepartamento.text.toString()
+            val necesidad = binding.editTextNecesidad.text.toString()
+            val sdf = SimpleDateFormat("dd/MM/yyyy hh:mm:ss")
+            val currentDate = sdf.format(Date())
             lifecycleScope.launch {
                 withContext(Dispatchers.IO) {
                     sendEmail()
+                    altaRegistro(departamento,necesidad, currentDate)
                 }
             }
             findNavController().navigate(R.id.action_solicitante_to_popUp)
         }
     }
+
+    //Funcion que envia los datos la API
+    fun altaRegistro(destino: String,comentarios: String, currentDate: String) {
+        val queue = Volley.newRequestQueue(activity)
+
+        val url = "http://192.168.1.124:10046/visit/add/"
+
+        val jsonobj = JSONObject()
+        jsonobj.put("department",destino)
+        jsonobj.put("reason",comentarios)
+        jsonobj.put("date", currentDate)
+
+        val req = JsonObjectRequest(
+            Request.Method.POST, url, jsonobj,
+            {
+                    response -> Log.d("API",response.toString())
+            },
+
+            {
+                Log.d("API",it.toString())
+            }
+        )
+        queue.add(req)
+    }
+
 
     //Funcion que envia los correos
     private fun sendEmail() {

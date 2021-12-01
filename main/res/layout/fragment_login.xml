@@ -111,19 +111,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textView_olvidar_contra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="222dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/gotham_medium"
-        android:text="@string/has_olvidado_tu_contrase_a"
-        android:textColor="#003B5C"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_to_dashboard"
         android:layout_width="160dp"

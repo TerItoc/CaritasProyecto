@@ -34,23 +34,8 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_dashboard_to_userOptions"
-            app:destination="@id/userOptions" />
-        <action
             android:id="@+id/action_dashboard_to_login"
             app:destination="@id/login" />
-    </fragment>
-    <fragment
-        android:id="@+id/userOptions"
-        android:name="com.mefalvarez.caritas_login_inicio.UserOptions"
-        android:label="fragment_user_options"
-        tools:layout="@layout/fragment_user_options" >
-        <action
-            android:id="@+id/action_userOptions_to_login"
-            app:destination="@id/login" />
-        <action
-            android:id="@+id/action_userOptions_to_dashboard"
-            app:destination="@id/dashboard" />
     </fragment>
     <fragment
         android:id="@+id/solicitante"

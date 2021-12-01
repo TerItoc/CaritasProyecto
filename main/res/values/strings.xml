@@ -1,10 +1,15 @@
 <resources>
-    <string name="app_name">caritas_login_inicio</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Caritas Turnos</string>
+    <string-array name="lista_motivos">
+        <item>2. ¿Qué es lo que \n necesita?</item>
+        <item>Donar</item>
+        <item>Solicitar</item>
+        <item>Visita</item>
+        <item>Otro</item>
+    </string-array>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="usuario">Usuario</string>
     <string name="contrase_a">Contraseña</string>
-    <string name="has_olvidado_tu_contrase_a">¿Has olvidado tu contraseña?</string>
     <string name="login">Login</string>
     <string name="escribe_tu_email_aqu">Escribe tu email aquí</string>
     <string name="escribe_tu_contrase_a_aqu">Escribe tu contraseña aquí</string>
@@ -31,8 +36,7 @@
     <string name="grafica3_desc">grafica3</string>
     <string name="grafica4_desc">grafica4</string>
     <string name="solicitante_titulo">Complete el registro</string>
-    <string name="a_qu_departamento_se_dirige">1. Departamento o empleado al que se dirige</string>
-    <string name="qu_es_lo_que_necesita">2. ¿Qué es lo que \n necesita?</string>
+    <string name="a_qu_departamento_se_dirige">1. Departamento al que se dirige</string>
     <string name="enviar_solicitante">Enviar</string>
     <string name="inicia_tu_turno_aqu">Inicia tu turno aquí</string>
     <string name="boton_menu_login">boton_menu_login</string>

@@ -41,21 +41,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dashboard_to_user"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/custom_button"
-        android:fontFamily="@font/gotham_medium"
-        android:text="@string/opciones_de_usuario_dashboard"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFA"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/dashboard_to_login"
         android:layout_width="150dp"
         android:layout_height="60dp"
@@ -69,53 +54,5 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/imagen_grafica1"
-        android:layout_width="511dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/grafica1_desc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_dashboard_titulo"
-        app:srcCompat="@drawable/_4_142766_line_graph_graphs_transparent_png"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imagen_grafica2"
-        android:layout_width="244dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="196dp"
-        android:contentDescription="@string/grafica2_desc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen_grafica1"
-        app:srcCompat="@drawable/unnamed_2"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imagen_grafica3"
-        android:layout_width="145dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="236dp"
-        android:contentDescription="@string/grafica3_desc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen_grafica1"
-        app:srcCompat="@drawable/ebw_jss3_12_014"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imagen_grafica4"
-        android:layout_width="254dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="52dp"
-        android:contentDescription="@string/grafica4_desc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen_grafica1"
-        app:srcCompat="@drawable/images"
-        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
